@@ -1,0 +1,204 @@
+.node {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    position: relative;
+    z-index: -1;
+    transition: all 0.5s ease;
+  }
+  .grow:not(.add-node){
+    animation: slide 1s;
+  }
+  @keyframes slide {
+    0% {
+      /* opacity: 0; */
+      transform: translateX(200px);
+    }
+    100% {
+      /* opacity: 1; */
+      transform: translateX(0);
+    }
+  }
+  .node.linked:after{
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: calc(100% - 10px);
+    width: 70px;
+    height: 20px;
+    background: linear-gradient(90deg, lime, 50%, salmon);
+    transition: width 0.5s;
+    transform: translateY(-50%);
+    transform-origin: center;
+  
+  }
+  .node_chain {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 50px;
+    padding-right: 150px;
+  }
+  .link{
+    position: absolute;
+    top: 50%;
+    left: calc(100% - 5px);
+    width: 60px;
+    height: 20px;
+    transition: width 0.5s;
+    transform: translateY(-50%);
+    transform-origin: center;
+  }
+  .add_node{
+    position: relative;
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    transition: none;
+    transform-origin: center;
+    color: white;
+    background-color: black;
+    border: 5px solid white;
+  }
+  /* .add_node:hover{
+    cursor: pointer;
+  } */
+  .vert_line{
+    transition: height 0.1s ease-in-out;
+  }
+  .horiz_line{
+    transition: width 0.1s ease-in-out;
+  }
+  .line{
+    /* transform-origin: 0 0; */
+  
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) translateX(-50%);
+    left: 50%;
+    border-radius: 10px;
+    background-color: white;
+    width: 0;
+    height: 0;
+  
+  }
+  .active .vert_line{
+    width: 5%;
+    height: 80%;
+    /* animation: spin 1s linear; */
+  }
+  .active .horiz_line{
+    width: 80%;
+    height: 5%;
+    /* animation: spin 1s linear; */
+  
+  }
+  
+  .active_node{
+    width: 200px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+  }
+  .test{
+    background: red;
+  }
+  @-moz-keyframes spin { 
+    100% { -moz-transform: rotate(90deg); } 
+  }
+  @-webkit-keyframes spin { 
+    100% { -webkit-transform: rotate(90deg); } 
+  }
+  @keyframes spin { 
+    100% { 
+        -webkit-transform: rotate(90deg); 
+        transform:rotate(90deg); 
+    } 
+  }
+  .node_chain__node{
+    
+  }
+  .move{
+    animation: none;
+  }
+  .add_node__expanded{
+
+    width: 75px;
+    height: 150px;
+    opacity: 0;
+    position: absolute;
+    border-radius: 0 999px 999px 0;
+    transform: translateX(27%) translateY(-12.5px);
+
+  }
+
+  .active_create{
+
+    opacity: 1;
+  }
+  .color{
+    width: 25px;
+    position: absolute;
+    top: 50%;
+    height: 25px;
+    border-radius: 10px;
+    transition: transform 0.5s;
+    transform: rotate(-90deg) translate(60px);
+    /* display: none; */
+  }
+  .color:hover{
+    cursor: pointer;
+  }
+  .active_color{
+    display: block;
+  }
+  .color1{
+    background: blue;
+    /* transform: translate(60px); */
+  }
+  .color1.active_color{
+    transform: rotate(-90deg) translate(60px);
+  }
+  .color2{
+    background: red;
+    /* transform: translate(60px); */
+  }
+  .color2.active_color{
+    transform: rotate(-60deg) translate(60px);
+  }
+  .color3{
+    background: green;
+    /* transform: translate(60px); */
+  }
+  .color3.active_color{
+    transform: rotate(-30deg) translate(60px);
+  }
+  .color4{
+    background: salmon;
+    /* transform: translate(60px); */
+  }
+  .color4.active_color{
+    transform: rotate(0deg) translate(60px);
+  }
+  .color5{
+    background: rgb(32, 96, 112);
+    /* transform: translate(60px); */
+  }
+  .color5.active_color{
+    transform: rotate(30deg) translate(60px);
+  }
+  .color6{
+    background: rgb(185, 107, 16);
+    /* transform: translate(60px); */
+  }
+  .color6.active_color{
+    transform: rotate(60deg) translate(60px);
+  }
+  .color7{
+    background: rgb(87, 44, 122);
+    /* transform: translate(60px); */
+  }
+  .color7.active_color{
+    transform: rotate(90deg) translate(60px);
+  }
+

@@ -1,0 +1,68 @@
+/* @import url('https://fonts.googleapis.com/css?family=Anton'); */
+@import url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+/* @font-face {
+    font-family: 'Nunito';
+    src: url('https://fonts.googleapis.com/css2?family=Nunito&display=swap');
+} */
+:root {
+    background-color: black;
+    overflow: hidden;
+    /* cursor: none; */
+  }
+  body{
+    font-family: 'Nunito', sans-serif;
+  }
+  .container{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+  }
+  .dialog{
+    position: absolute;
+    background: rgb(61, 64, 71);
+    width: 40%;
+    height: 30%;
+    left: 30%;
+    padding: 10px;
+    border-radius: 1em;
+}
+.dialog_title{
+    font-size: 1.5em;
+    font-weight: 700;
+    color: white;
+    padding: 10px;
+}
+.dialog_content{
+    font-size: 1.5em;
+}
+.dialog_list{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.dialog_content__item{
+    border-radius: 10px;
+    padding: 5px;
+    width: 25px;
+    height: 25px;
+}
+.dialog_content__item:hover{
+    cursor: pointer;
+}
+.close{
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 1em;
+    font-weight: 700;
+    color: white;
+    padding: 0;
+}
+.close:hover{
+    cursor: pointer;
+}
